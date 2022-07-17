@@ -1,0 +1,19 @@
+{
+  "name": "interfaces",
+  "version": "1.0.0",
+  "description": "Common code is a set of Constants, Enums, extensions, utils, and helpers that can be used all over the application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.20.0",
+    "typescript": "^4.7.4"
+  }
+}
