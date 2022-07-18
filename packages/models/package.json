@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "tslib": "^2.3.1"
+  },
   "devDependencies": {
+    "jest": "^27.4.3",
+    "@types/jest": "^28.1.6",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.20.0",

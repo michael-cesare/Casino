@@ -1,11 +1,14 @@
 import express from 'express';
+import appSettings, { CONFIGS } from './config'
+
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
-});
+export const startServer = async (config) => {
+  appSettings.config = JSON.parse(config);
+  console.log('-> Server initiating')
+  // Initialize all loaders asynchronously
+  await require('./bootstrap').default({ expressApp: app })
+  app.listen(CONFIGS().port, () => {
+    console.log(`-> Listening at http://localhost:${CONFIGS().port}`)
+  })
+}

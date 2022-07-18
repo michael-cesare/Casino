@@ -4,7 +4,7 @@
  */
 export interface ICard {
   /** A numeric code */
-  code: number
+  code: string
   /** Printed text */
   text: string
 }

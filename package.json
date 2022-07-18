@@ -1,8 +1,17 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "test": "lerna run test --stream --concurrency 1",
+    "test:common": "npx lerna run test --scope=common",
+    "build": "lerna run build --stream",
+    "build:BE": "npm run build --scope=BE"
+  },
   "devDependencies": {
     "lerna": "^5.1.8",
-    "nx": "14.2.2"
+    "nx": "^14.4.1"
+  },
+  "dependencies": {
+    "@octokit/core": "^4.0.4"
   }
 }
