@@ -1,12 +1,12 @@
 import { Router, Request, Response } from 'express'
 import { ICard } from 'models/src/card'
 
-const cardRoute = Router()
+const route = Router()
 
 export default (app: Router) => {
-  app.use('/card', cardRoute)
+  app.use('/card', route)
 
-  cardRoute.get('', async (req, res) => {
+  route.get('', async (req, res) => {
     const card:ICard = {
       code: '0000',
       text: 'a',
@@ -14,7 +14,7 @@ export default (app: Router) => {
     res.send(`card value:${card.text}`);
   });
 
-  cardRoute.get('/all', async (req: Request, res: Response) => {
+  route.get('/all', async (req: Request, res: Response) => {
     const cards:ICard[] = [{
       code: '0000',
       text: 'a',

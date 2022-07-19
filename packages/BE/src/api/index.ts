@@ -1,19 +1,12 @@
-import { Router, Request, Response } from 'express'
-import card from './routes/card'
-import { CONFIGS } from '../config'
+import { Router } from 'express'
+import Logger from '../helpers/logger'
+import rootRoutes from './routes/root'
+import cardRoutes from './routes/card'
 
 export default (): Router => {
-  console.info('-> API app router')
-  const app = Router()
-  app.get('/ping', async (req: Request, res: Response) => {
-    const result = CONFIGS().port;
-    console.info('-> PONG')
-    res.json( result )
-  });
-
-  card(app)
-
-  return app
-
+  Logger.info('-> API bootstrap router');
+  const app = Router();
+  rootRoutes(app);
+  cardRoutes(app);
+  return app;
 }
-

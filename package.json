@@ -4,6 +4,7 @@
   "scripts": {
     "test": "lerna run test --stream --concurrency 1",
     "test:common": "npx lerna run test --scope=common",
+    "build-all": "npx lerna run build",
     "build": "lerna run build --stream",
     "build:BE": "npm run build --scope=BE"
   },
