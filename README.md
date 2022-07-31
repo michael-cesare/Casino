@@ -1,5 +1,8 @@
-## Casino
-This Repository hlold Multiple Libraries as to have a casino game
+## About
+This Repository have Multiple Libraries as to be shared between Frontend and Backend.
+The repository is based on monorepo.
+
+Project goal is to have a small Casino concept where players share same gameplay.
 
 ## SETUP
 Uses Lerna as a to obtain monorepo setup.

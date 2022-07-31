@@ -5,20 +5,21 @@
     "setup": "lerna bootstrap",
     "setup:fe": "npm run setup --scope=fe",
     "setup:be": "npm run setup --scope=be",
-    "setup:common": "npm run setup --scope=common",
-    "setup:models": "npm run setup --scope=models",
     "test": "npx lerna run test --stream",
-    "test:common": "npm run test --scope=common",
     "test:be": "npm run test --scope=be",
     "test:fe": "npm run test --scope=fe",
-    "build:all": "lerna run build",
+    "clean": "npx lerna run clean --stream",
+    "serve": "npx lerna run serve --stream",
+    "serve:be": "npm run serve --scope=be",
+    "serve:fe": "npm run serve --scope=fe",
     "build": "npx lerna run build --stream",
     "build:be": "npm run build --scope=be",
     "build:fe": "npm run build --scope=fe"
   },
   "devDependencies": {
     "lerna": "^5.1.8",
-    "nx": "^14.4.1"
+    "nx": "^14.4.1",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "@octokit/core": "^4.0.4"
