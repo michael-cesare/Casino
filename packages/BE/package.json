@@ -4,9 +4,11 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
+    "setup": "npm install",
     "clean": "rimraf ./dist",
     "build": "tsc",
     "start": "node index.js",
+    "serve": "node index.js",
     "lint": "eslint . --ext .ts",
     "test": "jest",
     "check-typings": "tsc --noEmit"
@@ -26,18 +28,15 @@
   },
   "dependencies": {
     "common": "*",
-    "express": "^4.17.1",
     "models": "*",
+    "express": "^4.17.1",
     "tslib": "^2.3.1",
     "winston": "^3.8.1"
   },
   "nx": {
     "targets": {
       "build": {
-        "outputs": [
-          "{projectRoot}/build",
-          "{projectRoot}/public/build"
-        ]
+        "outputs": ["{projectRoot}/build", "{projectRoot}/public/build"]
       }
     }
   }

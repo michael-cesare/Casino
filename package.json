@@ -2,11 +2,19 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "test": "lerna run test --stream --concurrency 1",
-    "test:common": "npx lerna run test --scope=common",
-    "build-all": "npx lerna run build",
-    "build": "lerna run build --stream",
-    "build:BE": "npm run build --scope=BE"
+    "setup": "lerna bootstrap",
+    "setup:fe": "npm run setup --scope=fe",
+    "setup:be": "npm run setup --scope=be",
+    "setup:common": "npm run setup --scope=common",
+    "setup:models": "npm run setup --scope=models",
+    "test": "npx lerna run test --stream",
+    "test:common": "npm run test --scope=common",
+    "test:be": "npm run test --scope=be",
+    "test:fe": "npm run test --scope=fe",
+    "build:all": "lerna run build",
+    "build": "npx lerna run build --stream",
+    "build:be": "npm run build --scope=be",
+    "build:fe": "npm run build --scope=fe"
   },
   "devDependencies": {
     "lerna": "^5.1.8",
