@@ -8,8 +8,8 @@
     "clean": "rimraf ./dist",
     "test": "echo \"Error: no test specified\"",
     "build": "echo \"Error: no build specified\"",
-    "serve": "echo \"Error: no serve specified\" && exit 1",
-    "start": "echo \"Error: no serve specified\" && exit 1"
+    "serve": "echo \"Error: no serve specified\"",
+    "start": "echo \"Error: no serve specified\""
   },
   "keywords": [],
   "author": "",
