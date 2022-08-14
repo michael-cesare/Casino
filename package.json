@@ -8,6 +8,7 @@
     "test": "npx lerna run test --stream",
     "test:be": "npm run test --scope=be",
     "test:fe": "npm run test --scope=fe",
+    "test:common": "npm run test --scope=common",
     "clean": "npx lerna run clean --stream",
     "serve": "npx lerna run serve --stream",
     "serve:be": "npm run serve --scope=be",
