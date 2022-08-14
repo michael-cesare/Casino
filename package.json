@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "monorepo-casino",
   "private": true,
   "scripts": {
     "setup": "lerna bootstrap",
@@ -10,6 +10,8 @@
     "test:fe": "npm run test --scope=fe",
     "test:common": "npm run test --scope=common",
     "clean": "npx lerna run clean --stream",
+    "start": "npx lerna run start --stream",
+    "start:be": "npm run start --scope=be",
     "serve": "npx lerna run serve --stream",
     "serve:be": "npm run serve --scope=be",
     "serve:fe": "npm run serve --scope=fe",
@@ -18,11 +20,15 @@
     "build:fe": "npm run build --scope=fe"
   },
   "devDependencies": {
-    "lerna": "^5.1.8",
-    "nx": "^14.4.1",
+    "lerna": "^5.4.1",
+    "nx": "^14.5.6",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "@octokit/core": "^4.0.4"
+    "@octokit/core": "^4.0.4",
+    "common": "file:packages/common",
+    "models": "file:packages/models",
+    "BE": "file:packages/BE",
+    "FE": "file:packages/FE"
   }
 }
