@@ -1,15 +1,14 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es6"],
-    "types": ["node", "reflect-metadata"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "sourceMap": true,
-    "outDir": "dist"
+    "baseUrl": ".",
   },
-  "lib": ["es2015"]
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "index.js",
+    "dist",
+    "node_modules"
+  ],
 }

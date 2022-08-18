@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "module": "esnext",
+    "target": "es6",
+    "types": ["node", "reflect-metadata"],
+    "moduleResolution": "node",
+    "lib": [
+      "es2019",
+      "es2016",
+      "es2017",
+      "dom"
+    ],
+    "esModuleInterop": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "sourceMap": true
+  }
+}
