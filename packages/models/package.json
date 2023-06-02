@@ -1,9 +1,9 @@
 {
-  "name": "models",
+  "name": "@monorepo/models",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "setup": "npm install",
+    "setup": "yarn install",
     "build": "tsc",
     "test": "echo \"Error: no test specified\"",
     "lint": "eslint . --ext .ts"

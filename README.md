@@ -4,12 +4,14 @@ The repository is based on monorepo.
 
 Project goal is to have a small Casino concept where players share same gameplay.
 
+https://www.youtube.com/watch?v=2ljXcZrCLRk
+
 ## SETUP
 Uses Lerna as a to obtain monorepo setup.
 Do install lerna globally, and verify the installed version.
 
 ```sh
-npm install -g lerna
+yarn install -g lerna
 npx lerna --version
 ```
 
