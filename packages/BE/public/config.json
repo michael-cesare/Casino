@@ -1,0 +1,5 @@
+{
+  "API_PREFIX": "/api",
+  "LOG_LEVEL": "info",
+  "PORT": "3000"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "monorepo-casino",
+  "private": true,
+  "scripts": {
+    "setup": "npx lerna bootstrap",
+    "setup:fe": "npm run setup --scope=fe",
+    "setup:be": "npm run setup --scope=be",
+    "test": "npx lerna run test --stream",
+    "test:be": "npm run test --scope=be",
+    "test:fe": "npm run test --scope=fe",
+    "test:common": "npm run test --scope=common",
+    "clean": "npx lerna run clean --stream",
+    "start": "npx lerna run start --stream",
+    "start:be": "npm run start --scope=be",
+    "serve": "npx lerna run serve --stream",
+    "serve:be": "npm run serve --scope=be",
+    "serve:fe": "npm run serve --scope=fe",
+    "build": "npx lerna run build --stream",
+    "build:be": "npm run build --scope=be",
+    "build:fe": "npm run build --scope=fe"
+  },
+  "devDependencies": {
+    "lerna": "^5.4.3",
+    "nx": "^14.5.7",
+    "rimraf": "^3.0.2",
+
+    "tslib": "^2.4.0"
+  },
+  "dependencies": {
+    "@octokit/core": "^4.0.5",
+    "common": "file:packages/common",
+    "models": "file:packages/models",
+    "BE": "file:packages/BE",
+    "FE": "file:packages/FE"
+  }
+}
