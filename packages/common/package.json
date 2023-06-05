@@ -1,10 +1,10 @@
 {
-  "name": "common",
+  "name": "@monorepo/common",
   "version": "1.0.0",
   "description": "Common code is a set of Constants, Enums, extensions, utils, and helpers that can be used all over the application.",
   "main": "index.js",
   "scripts": {
-    "setup": "npm install",
+    "setup": "yarn install",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint . --ext .ts"

@@ -1,36 +1,34 @@
 {
-  "name": "monorepo-casino",
+  "name": "@monorepo/casino",
   "private": true,
   "scripts": {
-    "setup": "npx lerna bootstrap",
-    "setup:fe": "npm run setup --scope=fe",
-    "setup:be": "npm run setup --scope=be",
-    "test": "npx lerna run test --stream",
-    "test:be": "npm run test --scope=be",
-    "test:fe": "npm run test --scope=fe",
-    "test:common": "npm run test --scope=common",
+    "setup": "yarn lerna bootstrap",
+    "setup:ui": "lerna exec --scope=@ui/app -- yarn run setup",
+    "setup:be": "lerna exec --scope=@monorepo/be -- yarn run setup",
+    "test": "yarn lerna run test --stream",
+    "stest:be": "lerna exec --scope=@monorepo/be -- yarn test",
+    "stest:ui": "lerna exec --scope=@monorepo/ui -- yarn test",
+    "stest:common": "lerna exec --scope=@monorepo/common -- yarn test",
     "clean": "npx lerna run clean --stream",
     "start": "npx lerna run start --stream",
-    "start:be": "npm run start --scope=be",
+    "start:be": "lerna exec --scope=@monorepo/be -- yarn start",
+    "start:ui": "lerna exec --scope=@ui/app -- yarn start",
     "serve": "npx lerna run serve --stream",
-    "serve:be": "npm run serve --scope=be",
-    "serve:fe": "npm run serve --scope=fe",
+    "serve:be": "lerna exec --scope=@monorepo/be -- yarn run serve",
     "build": "npx lerna run build --stream",
-    "build:be": "npm run build --scope=be",
-    "build:fe": "npm run build --scope=fe"
+    "build:be": "lerna exec --scope=@monorepo/be -- yarn build",
+    "build:ui": "lerna exec --scope=@ui/app -- yarn build"
   },
   "devDependencies": {
+    "craco": "^0.0.3",
     "lerna": "^5.4.3",
     "nx": "^14.5.7",
     "rimraf": "^3.0.2",
-
     "tslib": "^2.4.0"
   },
-  "dependencies": {
-    "@octokit/core": "^4.0.5",
-    "common": "file:packages/common",
-    "models": "file:packages/models",
-    "BE": "file:packages/BE",
-    "FE": "file:packages/FE"
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
   }
 }
